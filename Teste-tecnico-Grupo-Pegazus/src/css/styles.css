@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    margin:0;
+}
+
+html{
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header, header nav, header nav ul{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    padding: 0.5rem;  
+}
+
+header nav ul li:hover{
+    
+}
+
+header nav ul li::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 0%; 
+    height: 3px; 
+    background-color: orange; 
+    transition: width 0.3s ease-in-out; 
+}
+
+nav ul li:hover::before {
+    width: 50%; 
+}
+
+
+main section.presentation{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+main section.presentation img{
+    width: 15rem;
+    object-fit: contain;
+}
+
+main section.presentation div{
+    margin-top: 3rem;
+}
+
+main section.presentation div p{  
+    max-width: 58ch;
+    font-size: 0.8rem;
+}
+main section.presentation div h6{
+    color:  #f9ac54;
+}
+
+main section.presentation div h1 {
+    font-size: 3rem; 
+}
+
+
+main section.presentation div h1 span{
+    color: #1f2125;
+    text-shadow:
+        1px 1px 0px white,
+        -1px -1px 0px white,
+        1px -1px 0px white,
+        -1px 1px 0px white; 
+}
+main section.presentation button
+{
+    margin-top: 1.5rem;
+}
+
+.btn-primary{
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #f9ac54;
+    border: none;
+    width: 7rem;
+}
+
+.btn-primary:hover{
+    background-color: #d79447;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+
