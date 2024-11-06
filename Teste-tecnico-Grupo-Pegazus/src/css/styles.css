@@ -10,9 +10,18 @@ html{
     width: 100%;
     display: flex; 
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
+
+ul{
+    list-style-type: none !important;
+}
+
+ a{
+    text-decoration: none;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -24,64 +33,71 @@ header, header nav, header nav ul{
 
 header{
     justify-content: space-evenly;
-    padding-bottom: 3rem;
 }
-header nav ul{
-    list-style: none;
-}
+
 header nav ul li{
     padding: 0.5rem;  
+    margin-right: 1rem;
 }
 
 header nav ul li:hover{
-    
+    cursor: pointer;
 }
 
-header nav ul li::before {
+header nav ul li a{
+    position: relative;
+    padding-bottom: 8px;
+}
+
+header nav ul li a::before {
     content: ''; 
-    position: absolute;
+    position: absolute; 
     bottom: 0; 
     left: 0; 
     width: 0%; 
-    height: 3px; 
-    background-color: orange; 
-    transition: width 0.3s ease-in-out; 
+    height: 2px; 
+    background-color: #d79447; 
+    transition: 0.3s ease-in-out; 
 }
 
-nav ul li:hover::before {
+header nav ul li a:hover::before {
     width: 50%; 
+    cursor: pointer;
 }
 
+main section{
+    padding: 1rem;
+}
 
-main section.presentation{
+main section#presentation{
     display: flex;
     justify-content: space-around;
 }
 
 
-main section.presentation img{
+main section#presentation img{
     width: 15rem;
     object-fit: contain;
 }
 
-main section.presentation div{
+main section#presentation div{
     margin-top: 3rem;
 }
 
-main section.presentation div p{  
+main section#presentation div p{  
     max-width: 58ch;
     font-size: 0.8rem;
 }
-main section.presentation div h6{
+main section#presentation div h6{
     color:  #f9ac54;
 }
 
-main section.presentation div h1 {
+main section#presentation div h1 {
     font-size: 3rem; 
 }
 
 
-main section.presentation div h1 span{
+main section#presentation div h1 span{
     color: #1f2125;
     text-shadow:
         1px 1px 0px white,
@@ -89,10 +105,26 @@ main section.presentation div h1 span{
         1px -1px 0px white,
         -1px 1px 0px white; 
 }
-main section.presentation button
+
+main section#presentation button
 {
     margin-top: 1.5rem;
 }
+
+
+main section#program > div:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section#program > div:first-child h1{
+   flex: 1;
+}
+
+main section#program > div:nth-of-type(2){
+
+}
+
 
 .btn-primary{
     padding: 0.8rem;
